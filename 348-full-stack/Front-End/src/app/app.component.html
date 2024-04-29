@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class = "navbar-nav">
+    <li class="nav-item">
+        <a routerLink="workouts" routerLinkActive="true" class="nav-link">Workout List</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="create-workout" routerLinkActive="true" class="nav-link">Add Workout</a>
+  </li>
+  </ul>
+</nav>
+
+<h1 class="text-center">{{title}}</h1>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

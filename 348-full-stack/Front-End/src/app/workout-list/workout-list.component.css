@@ -1,0 +1,13 @@
+.mb-3 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+    height: 50px;
+  }
+
+  .mat-form-field {
+    height: 48px; /* Adjust based on your design */
+    line-height: 48px; /* Maintain this equal to height for vertical centering */
+  }

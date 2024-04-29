@@ -1,0 +1,50 @@
+<h2 class="mb-3">Workout List</h2>
+<br>
+
+  <mat-form-field>
+    <mat-label>Select User</mat-label>
+    <mat-select [(value)]="selectedUserId" (selectionChange)="onUserSelect()">
+      <mat-option *ngFor="let userId of userIds" [value]="userId">
+        User {{ userId }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Duration</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let workout of filteredWorkouts">
+      <td>{{ workout.userID }}</td>
+      <td>{{ workout.duration }}</td>
+      <td>{{ workout.date }}</td>
+      <td>
+        <button (click)="updateWorkout(workout.workoutID)" class="btn btn-info">
+          Update
+        </button>
+        <button
+          (click)="deleteWorkout(workout.workoutID)"
+          class="btn btn-danger"
+          style="margin-left: 10px"
+        >
+          Delete
+        </button>
+        <button
+          (click)="userDetails(workout.userID)"
+          class="btn btn-info"
+          style="margin-left: 10px"
+        >
+          User Details
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
